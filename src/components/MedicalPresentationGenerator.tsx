@@ -133,7 +133,7 @@ ${outline() || fertilitPreservationTemplate}
             <label class="block text-sm font-medium text-gray-700 mb-2">演示语言</label>
             <select
               value={language()}
-              onChange={e => setLanguage(e.target.value as 'zh' | 'en')}
+              onInput={e => setLanguage(e.target.value as 'zh' | 'en')}
               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="zh">中文</option>
@@ -146,7 +146,7 @@ ${outline() || fertilitPreservationTemplate}
             <input
               type="number"
               value={duration()}
-              onChange={e => setDuration(parseInt(e.target.value) || 30)}
+              onInput={e => setDuration(parseInt(e.target.value) || 30)}
               min="10"
               max="120"
               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -172,7 +172,7 @@ ${outline() || fertilitPreservationTemplate}
           <input
             type="text"
             value={topic()}
-            onChange={e => setTopic(e.target.value)}
+            onInput={e => setTopic(e.target.value)}
             placeholder="请输入演示主题，如：青少年生育力保存的伦理与技术考量"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -182,7 +182,7 @@ ${outline() || fertilitPreservationTemplate}
           <label class="block text-sm font-medium text-gray-700 mb-2">详细大纲 (可选)</label>
           <textarea
             value={outline()}
-            onChange={e => setOutline(e.target.value)}
+            onInput={e => setOutline(e.target.value)}
             placeholder="请输入详细的演示大纲，包括各章节要点..."
             rows="8"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
